@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media, Mediana y Moda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Algo de estadistica</h1>
+        <p>
+            En esta practica calcularemos la Media, Mediana y Moda
+        </p>
+    </header>
+
+    <section>
+
+        <div class="input">
+            <h2>Hagamos algo de estadistica</h2>
+            <form action="">
+                <ul>
+                    <li>
+                        <label for="listado">
+                            agrega un listado de numeros separado por una coma "," 
+                        </label>
+                    </li>
+                    <li>
+                        <input type="text" name="listado" id="listado" />
+                    </li>
+                    
+                    <li>
+                        <button type="button" onclick="calcularEstadistica()">
+                            Listo!!
+                        </button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="output hidden" id="output">
+            <p>La media es: </p>
+            <h3 id="media"></h3>
+            <p>La mediana es: </p>
+            <h3 id="mediana"></h3>
+            <p>La moda es: </p>
+            <h3 id="moda"></h3>
+
+            
+        </div>
+
+    </section>
+
+
+    <script src="estadistica.js"></script>
+</body>
+
+</html>

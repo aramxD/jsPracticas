@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #ebebeb;
+    color: #000000;
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: .8rem;
+    object-fit: cover;
+    height: 30rem;
+    margin-bottom: 1rem;
+}
+
+.section-center {
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 400px;
+    padding: 5rem 0;
+}
+
+.tabs {
+    background-color: #FBC365;
+    border-radius: 1rem;
+    grid-auto-rows: auto 1fr;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn-container>.button {
+    padding: 1rem 0;
+    border: none;
+    font-size: 1rem;
+    background: #7952B3;
+    cursor: pointer;
+    transition: all .3s linear;
+    letter-spacing: .3rem;
+}
+
+
+/* 
+Para no perder el redondeo de los botonoes vamos a utilizar al hijo del grupo de botones */
+
+.button:nth-child(1) {
+    border-top-left-radius: 1rem;
+}
+
+.button:nth-child(3) {
+    border-top-right-radius: 1rem;
+}
+
+.button:hover:not(.live) {
+    background: #343A40;
+    color: white;
+}
+
+.button:hover {
+    background: #343A40;
+    color: white;
+}
+
+.tabs-content {
+    padding: 1rem 1.5rem;
+}
+
+.content {
+    display: none;
+}
+
+.content.live {
+    display: block;
+}
+
+.button.live {
+    background: #FBC365;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* geometria */
+
+.input {
+    margin-bottom: 10px;
+    border: solid black;
+    padding: 10px;
+}
+
+.output {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    border: none;
+    box-shadow: 5px 7px 1px rgba(80, 80, 80, 0.473);
+    text-align: center;
+    font-size: 25px;
+    margin: 0px 0px 10px 0px;
+}
+
+.btn-function {
+    height: 40px;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    box-shadow: 5px 7px 1px rgba(80, 80, 80, 0.473);
+    cursor: pointer;
+}
+
+.btn-function:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-function:active {
+    background-color: #28922c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+#salarios {
+    font-size: 10px;
+    word-wrap: break-word;
+}
+
+.tabla-salarios {
+    width: 40vw;
+}
+
+@media (min-width:800px) {
+    img {
+        margin-bottom: 0;
+    }
+    .section-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}

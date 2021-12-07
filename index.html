@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="section-center">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1638726201854-4b42cb53d308?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+        </div>
+
+        <div class="tabs">
+            <div class="btn-container">
+                <button class="button live" data-id="step1">Estadistica :)</button>
+                <button class="button" data-id="step2">Geometria ;)</button>
+                <button class="button" data-id="step3">Salarios :D</button>
+            </div>
+            <div class="tabs-content">
+                <section class="content live" id="step1">
+                    <div class="input">
+                        <h2>Hagamos algo de estadistica</h2>
+                        <form action="">
+                            <ul>
+                                <li>
+                                    <label for="listado">
+                            agrega un listado de numeros separado por una coma "," 
+                        </label>
+                                </li>
+                                <li>
+                                    <input type="text" name="listado" id="listado" />
+                                </li>
+
+                                <li>
+                                    <button class="btn-function" type="button" onclick="calcularEstadistica()">
+                            Listo!!
+                        </button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div class="output hidden" id="output">
+                        <div class="resultado">
+                            <p>La media es: </p>
+                            <h3 id="media"></h3>
+                        </div>
+                        <div class="resultado">
+                            <p>La mediana es: </p>
+                            <h3 id="mediana"></h3>
+                        </div>
+                        <div class="resultado">
+                            <p>La moda es: </p>
+                            <h3 id="moda"></h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content" id="step2">
+                    <h2>Calcula el area y perimetro de un cuadrado</h2>
+                    <div class="input">
+                        <form action="">
+                            <label for="ladoCuadrado">
+                                Cuanto mide un lado del cuadrado? 
+                            </label>
+                            <input type="number" name="ladoCuadrado" id="ladoCuadrado">
+                            <button type="button" class="btn-function" onclick="calculoGeometrico()">
+                                Geometria!!
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="output hidden" id="outputGeometria">
+                        <div class="resultado">
+                            <p>El perimetro es: </p>
+                            <h3 id="resultadoPerimetro"></h3>
+                        </div>
+                        <div class="resultado">
+                            <p>El area es: </p>
+                            <h3 id="resultadoArea"></h3>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="content" id="step3">
+                    <h3>Salarios de UN Pais</h3>
+                    <div class="tabla-salarios">
+                        <p id="salarios" class="salarios"></p>
+                    </div>
+
+                    <div class="input">
+                        <form action="">
+                            <label for="nombreSalario">
+                                Nombre: 
+                            </label>
+                            <input type="text" name="nombreSalario" id="nombreSalario">
+                            <label for="ingresoSalario">
+                                Salario: 
+                            </label>
+                            <input type="number" name="ingresoSalario" id="ingresoSalario">
+                            <button type="button" class="btn-function" onclick="ejecutarSalarios()">
+                                Sumate a la estadistica..!!
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="output">
+                        <div class="resultado">
+                            <p>Media de Salario: </p>
+                            <h3 id="resultadoSalario1"></h3>
+                        </div>
+                        <div class="resultado">
+                            <p>Media TOP 10%: </p>
+                            <h3 id="resultadoSalario2"></h3>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/estadistica.js"></script>
+    <script src="js/geometria.js"></script>
+    <script src="js/analisis.js"></script>
+</body>
+
+</html>
